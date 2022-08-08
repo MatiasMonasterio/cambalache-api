@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "useDefineForClassFields": true,  
+    "moduleResolution": "node", 
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,                       
+    "module": "commonjs",  
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,                   
+    "strict": true,                           
+    "esModuleInterop": true,                  
+    "skipLibCheck": true,                    
+    "forceConsistentCasingInFileNames": true,
+  },
+  "exclude": ["node_modules", "dist"],
+}
