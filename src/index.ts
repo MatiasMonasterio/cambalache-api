@@ -9,6 +9,7 @@ import swaggerUI from "swagger-ui-express";
 import apiRoutes from "./api";
 import documentation from "./docs";
 import { connectDatabases } from "./utilities";
+import { PORT } from "./config/env";
 
 const app = express();
 
@@ -24,7 +25,7 @@ app.use("/api", apiRoutes);
 app.use("/documentation", swaggerUI.serve, swaggerUI.setup(documentation));
 
 connectDatabases()
-  .then(() => app.listen(3000, () => console.log("Server init")))
+  .then(() => app.listen(PORT, () => console.log("Server init")))
   .catch((err) => console.error("Error: " + err));
 
 // process.on("uncaughtException", (error: Error) => {
